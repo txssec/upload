@@ -3,7 +3,7 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use App\Enums\Privacy;
-use App\Model\Type;
+use App\Models\Type;
 use Faker\Generator as Faker;
 
 $factory->define(type::class, function (Faker $faker) {
@@ -15,6 +15,6 @@ $factory->define(type::class, function (Faker $faker) {
         'mimes' => $faker->mimeType,
         'disk' => 'local',
         'privacy' => new Privacy($faker->randomElement(Privacy::toArray())),
-        'directory' => 'file',
+        'directory' => '/tmp',
     ];
 });
