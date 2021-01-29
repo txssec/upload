@@ -35,4 +35,16 @@ return [
     */
 
     'enabled' => (bool) env('GUARDIAN', true),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Guardian ACL
+    |--------------------------------------------------------------------------
+    |
+    | When guardian ACL is enabled, all request to named routes
+    | will be validated the authorization to access them in guardian.
+    |
+    */
+
+    'acl' => (bool) env('GUARDIAN_ACL', true),
 ];
